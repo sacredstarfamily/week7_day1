@@ -1,39 +1,74 @@
-body{
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
-#header{
+
+#header {
     background-color: #040702;
     color: white;
     width: 100%;
     text-align: center;
 }
-#title{
+
+#title {
     font-size: 2em;
     z-index: 1;
     position: absolute;
-    top:-15px;
+    top: -15px;
     text-align: center;
     width: 100%;
 }
-#logo{
+
+#logo {
     position: relative;
     width: 100px;
     z-index: 0;
     top: 50px;
 }
-main{
+
+main {
     z-index: 1;
     position: relative;
     top: 50px;
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 #days {
     width: 100%;
     text-align: center;
     padding-bottom: 10px;
     border-bottom: 2px solid black;
+}
+
+.tasks {
+    display: flex;
+    border: 2px dotted rgb(0, 153, 255);
+    flex: 1 1;
+    justify-content: space-around;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.card {
+    border: 5px solid black;
+    padding: 1px;
+    flex: 1 1;
+    justify-content: space-around;
+    width: 500px;
+    border-radius: 5px;
+    margin: 5px;
+    overflow: auto;
+    background-color: rgb(255, 210, 210);
+    color: blue;
+}
+
+code {
+    background-color: slategray;
+    color: white;
+    width: 75%;
+    padding: 5px;
+    border-radius: 5px;
 }

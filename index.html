@@ -1,28 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div id="header">
-        <img id="logo"src="./kekambus.png" alt="logo" width="88px" height="100%"/>
+        <img id="logo" src="./kekambus.png" alt="logo" width="88px" height="100%" />
         <h1 id="title">Kekambus Week7 Homework</h1>
-        
+
     </div>
     <main>
         <div class="day1" id="days">
             <h2>Day 1</h2>
-           
-                <h3>Task 1</h3>
-                <button onclick="task1()">Click me</button>
-                <h3>Task 2</h3>
+            <div class="tasks">
+                <div class="card">
+                    <p>
+                        // Exercise 1:<br/> // Declare a variable, name, and assign it a string value representing your name.<br/> // Declare another variable, greeting, and assign it a string value like "Hello, ".<br/> // Concatenate greeting and name
+                        together and store it in a new variable<br/> called welcomeMessage.<br/> // Display welcomeMessage using console.log().<br/>
+                        <code>
+                            const name = "Kekambus_142";<br/>
+                            const welcomeMsg = "Hello, " + name + "!";<br/>
+                            console.log(welcomeMsg);<br/>
+                        </code
+                    </p>
+                <br>
                 <button onclick="task2()">Click me</button>
+                </div>
+                
+                <div class="card">
+                        <p>
+                            // Exercise 2:<br/>
+                            // Declare a variable, temperatureC, and assign it a numeric value representing the current temperature in Celsius.<br/>
+                            // Declare a second variable, temperatureF, that is the fahrenheit conversion of temperateC<br/>
+                            // Write an if statement to check if the temperature is greater than 80 degrees fahrenheit.<br/>
+                            // If it is, display a message saying "It's a hot day!" using console.log(). Otherwise, display "It's not too hot today."<br/>
+                            <code>
+                                const name = "Kekambus_142";<br/>
+                                const welcomeMsg = "Hello, " + name + "!";<br/>
+                                console.log(welcomeMsg);<br/>
+                            </code
+                        </p>
+                    <br>
+                    <button onclick="task2()">Click me</button>
+                </div>
+            </div>
+                <div class="tasks">
+                <div class="card">
+                        <p>
+                            
+                        // Exercise 3:<br/>
+                        // Declare a variable, count, and assign it an initial value of 0.<br/>
+                        // Use a while loop to display the value of count by 5s in the console until it reaches 50.<br/>
+                        // Increment the value of count by 5 within the loop.<br/>
+                            <code>
+                                const name = "Kekambus_142";<br/>
+                                const welcomeMsg = "Hello, " + name + "!";<br/>
+                                console.log(welcomeMsg);<br/>
+                            </code
+                        </p>
+                    <br>
+                    <button onclick="task2()">Click me</button>
+                </div>
+            </div>
+           
         </div>
         <div class="day2" id="days">
             <h2>Day 2</h2>
+            <div class="tasks">
+                <div class="card">
+                    <p>
+                        // Exercise #1<br/>
+                        // Use map to convert an array of number from inches to feet<br/>
+                        <code>
+                            const inches = [12, 24, 36, 48, 60];<br/>
+                            const feet = inches.map(inch => inch / 12);<br/>
+                            console.log(feet);<br/>
+                        </code
+                    </p>
+                <br>
+               
+                </div>
+                
+                <div class="card">
+                        <p>
+                            // Exercise #2:<br/>
+                            // Use the array of shop items provided and present the the information in the following format<br/>
+                            
+                            // =======================================<br/>
+                            // Name: 	 Air Max 97<br/>
+                            // Price: 	 130<br/>
+                            // About: 	 The design of the shoe is commonly thought to be inspired by the bullet trains of Japan, but the design was inspired by mountain bikes.<br/>
+                            // Category: shoes<br/>
+                            // =======================================<br/>
+                            <code>
+                                shopItems.forEach(item => {<br/>
+                                    console.log("=======================================");<br/>
+                                    console.log("Name: \t", item.name);<br/>
+                                    console.log("Price: \t", item.price);<br/>
+                                    console.log("About: \t", item.desc);<br/>
+                                    console.log("Category: ", item.category);<br/>
+                                    console.log("=======================================");<br/>
+                                });<br/>
+                            </code
+                        </p>
+                    <br>
+               
+                </div>
+            </div>
+            <div class="tasks">
+                <div class="card">
+                        <p>
+                            // Exercise #3:<br/>
+                            // String Reversal Function:<br/>
+                            // Write a function called reverseString that takes a string (str) as an argument and returns the reverse of that string.<br/>
+                            <code>
+                                function reverseString(str) {<br/>
+                                    return str.split('').reverse().join('');<br/>
+                                }<br/>
+                            </code
+                        </p>
+                    <br>
+                  
+                </div>
+                <div class="card">
+                    <p>
+                        
+                        // Exercise #4:<br/>
+                        // Duplicate Element Remover Function:<br/>
+                        // Write a function called removeDuplicates that takes an array (arr) as an argument and returns a new array with duplicate elements removed<br/>
+                        <code>
+                            function removeDuplicates(arr) {<br/>
+                                return [...new Set(arr)];<br/>
+                            }<br/>
+                        </code
+                    </p>
+                <br>
+               
+                </div>
+            
+            </div>
         </div>
     </main>
     <script src="homework.js"></script>
