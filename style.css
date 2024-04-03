@@ -53,11 +53,14 @@ main {
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
     border: 5px solid black;
     padding: 1px;
     flex: 1 1;
     justify-content: space-around;
     width: 500px;
+    justify-content: center;
     border-radius: 5px;
     margin: 5px;
     overflow: auto;
@@ -65,10 +68,18 @@ main {
     color: blue;
 }
 
+.codeBlock {
+    width: 100%;
+    height: auto;
+    text-align: left;
+    background-color: slategray;
+    text-wrap: wrap;
+    border-radius: 5px;
+}
+
 code {
+    overflow-wrap: break-word;
     background-color: slategray;
     color: white;
-    width: 75%;
     padding: 5px;
-    border-radius: 5px;
 }
