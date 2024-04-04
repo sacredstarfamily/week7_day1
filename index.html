@@ -31,7 +31,7 @@
                         </code>
                     </p>
                     <br>
-                    <button onclick="task2()">Click me</button>
+                    <button class="taskBtn" onclick="task1()">Click me</button>
                 </div>
 
                 <div class="card">
@@ -45,7 +45,7 @@
                             </code>
                     </p>
                     <br>
-                    <button onclick="task2()">Click me</button>
+                    <button class="taskBtn" onclick="task2()">Click me</button>
                 </div>
             </div>
             <div class="tasks">
@@ -56,13 +56,16 @@
                         the loop.<br/>
                         <div class="codeBlock"></div>
                         <code>
-                                const name = "Kekambus_142";<br/>
-                                const welcomeMsg = "Hello, " + name + "!";<br/>
-                                console.log(welcomeMsg);<br/>
+                            let count = 0;<br/>
+                            while (count <= 50) {<br/>
+                                console.log(count);<br/>
+                                count += 5;<br/>
+                            }
+                            
                             </code>
                     </p>
                     <br>
-                    <button onclick="task2()">Click me</button>
+                    <button class="taskBtn" onclick="task3()">Click me</button>
                 </div>
             </div>
 
@@ -89,8 +92,8 @@
                     <p>
                         // Exercise #2:<br/> // Use the array of shop items provided and present the the information in the following format<br/> // =======================================<br/> // Name: Air Max 97<br/> // Price: 130<br/> // About: The
                         design of the shoe is commonly thought to be inspired by the bullet trains of Japan, but the design was inspired by mountain bikes.<br/> // Category: shoes<br/> // =======================================<br/>
-                        <div class="codeBlock">
-                            <code>
+                        <div class="codeBlock"> </div>
+                        <code>
                                 shopItems.forEach(item => {<br/>
                                     console.log("=======================================");<br/>
                                     console.log("Name: \t", item.name);<br/>
@@ -100,7 +103,7 @@
                                     console.log("=======================================");<br/>
                                 });<br/>
                             </code>
-                        </div>
+
                     </p>
                     <br>
 
@@ -110,13 +113,13 @@
                 <div class="card">
                     <p>
                         // Exercise #3:<br/> // String Reversal Function:<br/> // Write a function called reverseString that takes a string (str) as an argument and returns the reverse of that string.<br/>
-                        <div class="codeBlock">
-                            <code>
+                        <div class="codeBlock"> </div>
+                        <code>
                                 function reverseString(str) {<br/>
                                     return str.split('').reverse().join('');<br/>
                                 }<br/>
                             </code>
-                        </div>
+
                     </p>
                     <br>
 
@@ -125,13 +128,13 @@
                     <p>
 
                         // Exercise #4:<br/> // Duplicate Element Remover Function:<br/> // Write a function called removeDuplicates that takes an array (arr) as an argument and returns a new array with duplicate elements removed<br/>
-                        <div class="codeBlock">
-                            <code>
+                        <div class="codeBlock"></div>
+                        <code>
                             function removeDuplicates(arr) {<br/>
                                 return [...new Set(arr)];<br/>
                             }<br/>
                         </code>
-                        </div>
+
                     </p>
                     <br>
 

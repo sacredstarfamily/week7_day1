@@ -5,15 +5,7 @@ console.log(welcomeMsg);
 const temperatureC = 25;
 const temperatureF = (temperatureC * 9 / 5) + 32;
 
-function task2() {
-    if (temperatureF > 80) {
-        console.log("It's a hot day!");
-        alert("It's a hot day!")
-    } else {
-        console.log("It's not too hot today.");
-        alert("It's not too hot today.")
-    }
-}
+
 
 
 let count = 0;
@@ -26,7 +18,26 @@ function task1() {
     alert("Hello, " + name + "!");
 }
 
-//day 2 exercise 1
+function task2() {
+    if (temperatureF > 80) {
+        console.log("It's a hot day!");
+        alert("It's a hot day!")
+    } else {
+        console.log("It's not too hot today.");
+        alert("It's not too hot today.")
+    }
+}
+let task3 = () => {
+        let count = 0;
+        alert("counting to 50 by 5s: in the console");
+        while (count <= 50) {
+            console.log(count);
+
+            count += 5;
+        }
+
+    }
+    //day 2 exercise 1
 const inches = [12, 24, 36, 48, 60];
 const feet = inches.map(inch => inch / 12);
 console.log(feet);
