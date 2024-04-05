@@ -111,3 +111,102 @@ function removeDuplicates(arr) {
 let testArr1 = ['Chicago', 'New York', 'Miami', 'New York', 'Chicago', 'Miami', 'Chicago', 'New York', 'Chicago'];
 let uniqueArr = removeDuplicates(testArr1);
 console.log(uniqueArr); // Output: ['Chicago', 'New York', 'Miami']
+
+//day 3 exercise 1
+class Account {
+    constructor(accountNumber, currentBalance, owner) {
+        this.accountNumber = accountNumber;
+        this.currentBalance = currentBalance;
+        this.owner = owner;
+    }
+
+    deposit(amount) {
+        this.currentBalance += amount;
+    }
+
+    withdraw(amount) {
+        if (amount <= this.currentBalance) {
+            this.currentBalance -= amount;
+        } else {
+            console.log("Insufficient funds");
+        }
+    }
+}
+
+class CheckingAccount extends Account {
+    constructor(accountNumber, currentBalance, owner, overdraftLimit) {
+        super(accountNumber, currentBalance, owner);
+        this.overdraftLimit = overdraftLimit;
+    }
+
+    withdraw(amount) {
+        if (amount <= this.currentBalance + this.overdraftLimit) {
+            this.currentBalance -= amount;
+        } else {
+            console.log("Insufficient funds");
+        }
+    }
+}
+
+class SavingsAccount extends Account {
+    constructor(accountNumber, currentBalance, owner, interestRate) {
+        super(accountNumber, currentBalance, owner);
+        this.interestRate = interestRate;
+    }
+
+    addInterest() {
+        const interest = this.currentBalance * (this.interestRate / 100);
+        this.currentBalance += interest;
+    }
+}
+//day 3 exersise 2
+function getMovieInfo(movieName) {
+    return new Promise((resolve, reject) => {
+        if (movieName.length > 5) {
+            let movie = {
+                id: 123,
+                title: movieName,
+                director: 'Christopher Spielberg',
+                runtime: 157,
+                description: 'Good vs Evil'
+            }
+            resolve(movie)
+        } else {
+            reject(`${movieName} cannot be accessed because it is too short.`)
+        }
+    })
+}
+async function printMovieInfo(movieTitle) {
+    try {
+        const movie = await getMovieInfo(movieTitle);
+        console.log("Movie Information:");
+        console.log("Title:", movie.title);
+        console.log("Director:", movie.director);
+        console.log("Runtime:", movie.runtime);
+        console.log("Description:", movie.description);
+    } catch (error) {
+        console.warn("Error:", error);
+    }
+}
+printMovieInfo('Indiana Jones and the Dark Knight');
+printMovieInfo('ET');
+//day 3 exersise 3
+const checkingAccount = new CheckingAccount("123456789", 1000, "John Doe", 500);
+checkingAccount.deposit(200);
+checkingAccount.withdraw(1500);
+checkingAccount.withdraw(150);
+console.log("exersise 1 day3")
+console.log(checkingAccount);
+const savingsAccount = new SavingsAccount("987654321", 5000, "Jane Smith", 2);
+savingsAccount.addInterest();
+console.log(savingsAccount);
+
+function backgroundChanger() {
+    const body = document.querySelector('body');
+    const currentColor = body.style.backgroundColor;
+    if (currentColor === 'green') {
+        body.style.backgroundColor = 'white';
+    } else {
+        body.style.backgroundColor = 'green';
+    }
+}

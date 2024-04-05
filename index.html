@@ -142,6 +142,117 @@
 
             </div>
         </div>
+        <div class="day3" id="days">
+            <h2>Day 3</h2>
+            <div class="tasks">
+                <div class="card">
+                    <p>
+                        // Exercise 1:<br/> Banking System Create an Account class with the properties accountNumber, currentBalance, and owner. The Account should have methods to deposit and withdraw. The deposit method should add that amount to the
+                        currentBalance. The withdraw method should first check if there is enough to withdraw before withdrawing Implement child classes CheckingAccount and SavingsAccount, each inheriting from the Account class. The CheckingAccount will
+                        also have an overdraftLimit property. Override the withdraw method to first check if there is enough (+ overdraftLimit) before withdrawing. The SavingsAccount will also have an interestRate. Add a method addInterest that will increase
+                        the currentBalance by that interest rate
+
+
+                        <div class="codeBlock"></div>
+                        <code>
+                            class Account {<br/>
+                                constructor(accountNumber, currentBalance, owner) {<br/>
+                                    this.accountNumber = accountNumber;<br/>
+                                    this.currentBalance = currentBalance;<br/>
+                                    this.owner = owner;<br/>
+                                }<br/>
+                                deposit(amount) {<br/>
+                                    this.currentBalance += amount;<br/>
+                                }<br/>
+                                withdraw(amount) {<br/>
+                                    if (this.currentBalance >= amount) {<br/>
+                                        this.currentBalance -= amount;<br/>
+                                    } else {<br/>
+                                        console.log("Insufficient funds");<br/>
+                                    }<br/>
+                                }<br/>
+                            }<br/>
+                            class CheckingAccount extends Account {<br/>
+                                constructor(accountNumber, currentBalance, owner, overdraftLimit) {<br/>
+                                    super(accountNumber, currentBalance, owner);<br/>
+                                    this.overdraftLimit = overdraftLimit;<br/>
+                                }<br/>
+                                withdraw(amount) {<br/>
+                                    if (this.currentBalance + this.overdraftLimit >= amount) {<br/>
+                                        this.currentBalance -= amount;<br/>
+                                    } else {<br/>
+                                        console.log("Insufficient funds");<br/>
+                                    }<br/>
+                                }<br/>
+                            }<br/>
+                            class SavingsAccount extends Account {<br/>
+                                constructor(accountNumber, currentBalance, owner, interestRate) {<br/>
+                                    super(accountNumber, currentBalance, owner);<br/>
+                                    this.interestRate = interestRate;<br/>
+                                }<br/>
+                                addInterest() {<br/>
+                                    this.currentBalance += this.currentBalance * this.interestRate;<br/>
+                                }<br/>
+                            }<br/>
+                        </code>
+
+                    </p>
+                    <br>
+
+                </div>
+
+                <div class="card">
+                    <p>
+                        // Exercise 2 - Promises:<br/> // Using the below getMovieInfo function, which is a Promised-base function, write an asynchronous function (.then().catch() or async/await)<br/> // called printMovieInfo that will take in a movie
+                        title and then either displays the movie information or logs an error with a console.warn().<br/>
+                        <div class="codeBlock"> </div>
+                        <code>
+                            async function printMovieInfo(movieTitle) {<br/>
+                                try {<br/>
+                                    const movie = await getMovieInfo(movieTitle);<br/>
+                                    console.log("Movie Information:");<br/>
+                                    console.log("Title:", movie.title);<br/>
+                                    console.log("Director:", movie.director);<br/>
+                                    console.log("Runtime:", movie.runtime);<br/>
+                                    console.log("Description:", movie.description);<br/>
+                                } catch (error) {<br/>
+                                    console.warn("Error:", error);<br/>
+                                }<br/>
+                            }<br/>
+                        </code>
+
+                    </p>
+                    <br>
+
+                </div>
+            </div>
+            <div class="tasks">
+                <div class="card">
+                    <p>
+                        // Exercise #3:<br/> // Write a function called backgroundChanger that toggles the background color of the page.<br/>
+
+                        <div class="codeBlock"></div>
+                        <code>
+                            function backgroundChanger() {<br/>
+                                const body = document.querySelector('body');<br/>
+                                const currentColor = body.style.backgroundColor;<br/>
+                                if (currentColor === 'azure') {<br/>
+                                    body.style.backgroundColor = 'white';<br/>
+                                } else {<br/>
+                                    body.style.backgroundColor = 'azure';<br/>
+                                }<br/>
+                            }
+                        </code>
+                        <br/>
+                        <button class="taskBtn" onclick="backgroundChanger()">Change Background</button>
+                    </p>
+                    <br>
+
+                </div>
+
+
+            </div>
+        </div>
     </main>
     <script src="homework.js"></script>
 </body>
